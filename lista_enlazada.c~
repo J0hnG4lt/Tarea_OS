@@ -101,7 +101,7 @@ Guarda los contenidos de la lista en el archivo
 
 	FILE *arc = fopen(nombre_arc,"w");
 	
-	if (arc == NULL){
+	if (arc == -1){
 		printf("No se pudo abrir archivo \n");
 		exit(1);
 	}
@@ -117,7 +117,7 @@ Guarda los contenidos de la lista en el archivo
 		temp = temp->siguiente;
 	}
 	
-	if (fclose(arc) == EOF){
+	if (fclose(arc) == -1){
 		printf("\nProblema al cerrar archivo\n");
 		exit(1);
 	}

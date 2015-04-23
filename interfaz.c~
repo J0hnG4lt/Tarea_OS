@@ -202,7 +202,7 @@ todas sus lineas.
 	
 	FILE *arch;
 	
-	if ((arch = fopen(nombre,"r")) == NULL){
+	if ((arch = fopen(nombre,"r")) == -1){
 		
 		printf("\nNo se pudo abrir el archivo\n");
 		exit(1);
